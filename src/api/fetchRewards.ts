@@ -30,6 +30,4 @@ function fetchMockRewards(): Promise<any> {
   );
 }
 
-const fetchMethod = __DEV__ ? fetchMockRewards : fetchRewards;
-
-export default fetchMethod;
+export default __DEV__ ? fetchMockRewards : fetchRewards;
